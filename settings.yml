@@ -1,9 +1,12 @@
+
 use_default_settings: true
 
 server:
-  secret_key: "ultrasecretkey"
+  secret_key: "REEMPLAZAR_POR_UNA_CLAVE_ALEATORIA"
   limiter: false
   image_proxy: true
+  port: 8080
+  bind_address: "127.0.0.1"
 
 search:
   safe_search: 0
