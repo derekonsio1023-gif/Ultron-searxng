@@ -11,6 +11,7 @@ COPY searx/templates /usr/local/searxng/searx/templates
 COPY searx/static /usr/local/searxng/searx/static
 
 # Genera el Caddyfile directamente dentro del contenedor
+RUN pip install --no-cache-dir granian
 RUN mkdir -p /etc/caddy && printf ':{$PORT:10000} {\n    header {\n        Access-Control-Allow-Origin *\n        Access-Control-Allow-Methods "GET, POST, OPTIONS"\n        Access-Control-Allow-Headers *\n    }\n    @options {\n        method OPTIONS\n    }\n    respond @options 204\n    reverse_proxy localhost:8080\n}\n' > /etc/caddy/Caddyfile
 
 EXPOSE 10000
