@@ -15,4 +15,4 @@ RUN mkdir -p /etc/caddy && printf ':{$PORT:10000} {\n    header {\n        Acces
 
 EXPOSE 10000
 
-ENTRYPOINT ["/bin/sh", "-c", "/usr/local/searxng/dockerfiles/docker-entrypoint.sh & exec caddy run --config /etc/caddy/Caddyfile --adapter caddyfile"]
+ENTRYPOINT ["/bin/sh", "-c", "(/usr/local/searxng/entrypoint.sh || granian --interface wsgi --host 0.0.0.0 --port 8080 searx.webapp:app) & exec caddy run --config /etc/caddy/Caddyfile --adapter caddyfile"]
