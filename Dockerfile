@@ -4,7 +4,6 @@ FROM docker.io/caddy:2-alpine AS caddy_builder
 FROM docker.io/searxng/searxng:latest
 
 USER root
-RUN find / -type f \( -name pip -o -name granian -o -name python \) 2>/dev/null | head -50
 
 COPY --from=caddy_builder /usr/bin/caddy /usr/bin/caddy
 
