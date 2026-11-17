@@ -2,7 +2,7 @@
 use_default_settings: true
 
 server:
-  secret_key: "REEMPLAZAR_POR_UNA_CLAVE_ALEATORIA"
+  secret_key: "8f3c1a9e7b2d6f40c5a8e1d93b7f2046a9c2e5d81f6b3a70d4e9c8f2157b6a03"
   limiter: false
   image_proxy: true
   port: 8080
