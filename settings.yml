@@ -1,0 +1,14 @@
+use_default_settings: true
+
+server:
+  secret_key: "uL9#mP4xQ8@zW2vN7kR5tY1bJ6cF9hG3"
+  limiter: false
+  image_proxy: true
+
+search:
+  safe_search: 0
+  autocomplete: "google"
+  default_lang: "es"
+  formats:
+    - html
+    - json
