@@ -1,7 +1,7 @@
 use_default_settings: true
 
 server:
-  secret_key: "uL9#mP4xQ8@zW2vN7kR5tY1bJ6cF9hG3"
+  secret_key: "ultrasecretkey"
   limiter: false
   image_proxy: true
 
